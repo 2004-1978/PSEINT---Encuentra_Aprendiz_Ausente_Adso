@@ -34,11 +34,11 @@ Estos nombres se guardan en el arreglo presentes.
 Paso 4: El programa compara quién no está en la lista de presentes
 El algoritmo revisa uno por uno los nombres en la lista de aprendices y verifica si ese nombre aparece en la lista de presentes:
 
-* Ana → está en presentes → ✅
-* Luis → no está → ❌ (se guarda como ausente)
-* Carlos → está en presentes → ✅
-* Marta → no está → ❌ (se guarda como ausente)
-* Sofía → está en presentes → ✅
+* Ana → está en presentes → SI
+* Luis → no está → NO (se guarda como ausente)
+* Carlos → está en presentes → SI
+* Marta → no está → NO (se guarda como ausente)
+* Sofía → está en presentes → SI
 
 Paso 5: El programa muestra los aprendices ausentes
 Como resultado, el programa imprime:
