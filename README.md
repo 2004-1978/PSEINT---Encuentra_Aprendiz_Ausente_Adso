@@ -1,52 +1,55 @@
-Algoritmo Encuentra_Aprendiz_Ausente_Adso
-		Definir aprendices, presentes, ausentes Como Caracter
-		Definir nombre, aprendiz, presente, ausente Como Caracter
-		Definir totalPresentes, contador, contadorAusentes Como Entero
-		Definir encontrado Como Logico
-		
-		Dimension aprendices[27]
-		Dimension presentes[27]
-		Dimension ausentes[27]
-		
-		// Ingresar los nombres de los 27 aprendices
-		Para contador <- 1 Hasta 27 Hacer
-			Escribir "Ingrese el nombre del aprendiz ", contador, ":"
-			Leer nombre
-			aprendices[contador] <- nombre
-		FinPara
-		
-		// Leer cuántos asistieron
-		Escribir "Ingrese la cantidad de aprendices que asistieron hoy:"
-		Leer totalPresentes
-		
-		Para contador <- 1 Hasta totalPresentes Hacer
-			Escribir "Ingrese el nombre del aprendiz presente:"
-			Leer nombre
-			presentes[contador] <- nombre
-		FinPara
-		
-		// Buscar ausentes
-		contadorAusentes <- 1
-		Para contador <- 1 Hasta 27 Hacer
-			aprendiz <- aprendices[contador]
-			encontrado <- Falso
-			
-			Para contador2 <- 1 Hasta totalPresentes Hacer
-				presente <- presentes[contador2]
-				Si aprendiz = presente Entonces
-					encontrado <- Verdadero
-				FinSi
-			FinPara
-			
-			Si No encontrado Entonces
-				ausentes[contadorAusentes] <- aprendiz
-				contadorAusentes <- contadorAusentes + 1
-			FinSi
-		FinPara
-		
-		// Mostrar ausentes
-		Escribir "Los aprendices ausentes hoy son:"
-		Para contador <- 1 Hasta contadorAusentes - 1 Hacer
-			Escribir "- ", ausentes[contador]
-		FinPara
-FinAlgoritmo
+# Encuentra_Aprendiz_Ausente_Adso
+
+Este Repositorio contiene un Algoritmo en **Pseint** que determina si un estudiante asisto o no
+
+#Descripcion
+Algoritmo el Cual Consiste en Asignar el nombre de 27 estudiantes, despues ingresar la cantidad de estudiantes que asistieron, luego digitar los nombres de los estudiantes que asistieron y al terminar le muestra la lista de los estudiantes que NO asistieron.
+
+#Ejemplo de Uso 
+Supongamos que en una clase hay 5 aprendices (usamos 5 en lugar de 27 para simplificar el ejemplo).
+
+Paso 1: Lista de todos los aprendices registrados
+El profesor ingresa los nombres de los 5 aprendices:
+
+1. Ana
+2. Luis
+3. Carlos
+4. Marta
+5. Sofía
+
+Esta información se guarda en el arreglo aprendices.
+
+Paso 2: Se pregunta cuántos asistieron hoy
+El profesor dice que 3 aprendices asistieron.
+
+Paso 3: Se ingresan los nombres de los presentes
+Los nombres de los presentes que se ingresan son:
+
+1. Ana
+2. Carlos
+3. Sofía
+
+Estos nombres se guardan en el arreglo presentes.
+
+Paso 4: El programa compara quién no está en la lista de presentes
+El algoritmo revisa uno por uno los nombres en la lista de aprendices y verifica si ese nombre aparece en la lista de presentes:
+
+* Ana → está en presentes → ✅
+* Luis → no está → ❌ (se guarda como ausente)
+* Carlos → está en presentes → ✅
+* Marta → no está → ❌ (se guarda como ausente)
+* Sofía → está en presentes → ✅
+
+Paso 5: El programa muestra los aprendices ausentes
+Como resultado, el programa imprime:
+
+* Los aprendices ausentes hoy son:
+- Luis
+- Marta
+
+#Requisitos
+Se necesita pseint para ejecutar este algoritmo
+
+#Autor 
+- Miguel Caceres
+- Ficha 3065370
